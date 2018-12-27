@@ -57,7 +57,7 @@ public class LearningGroup implements Comparable<LearningGroup> {
     }
 
     public String getDateFormatted() {
-        return new SimpleDateFormat("E, dd.MM.yyy").format(this.date).toString();
+        return new SimpleDateFormat("E, dd.MM.yyy HH:mm").format(this.date).toString();
     }
 
     @Override
