@@ -17,11 +17,11 @@ public class Main extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("/resources/views/Home.fxml"));
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("view/Home.fxml"));
         stage.setScene(new Scene(root));
         //set stage borderless
         stage.initStyle(StageStyle.UNDECORATED);
-        stage.getIcons().add(new Image(String.valueOf(getClass().getResource("/resources/images/aau_logo.png"))));
+        stage.getIcons().add(new Image(String.valueOf(getClass().getClassLoader().getResource("images/aau_logo.png"))));
 
         //drag it here
         root.setOnMousePressed(event -> {

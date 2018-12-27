@@ -2,8 +2,8 @@
 .idea/
 *.iml
 
-# Output Directory
-out/
+# Maven
+target/
 
 # Compiled class file
 *.class

@@ -64,6 +64,8 @@ public class Controller implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         btnOverview.setStyle("-fx-background-color: #10165F");
 
+        //TextFields.bindAutoCompletion(textfield,"text to suggest", "another text to suggest");
+
         generateTestData();
 
         Node[] nodes = new Node[10];
@@ -71,7 +73,7 @@ public class Controller implements Initializable {
             try {
 
                 final int j = i;
-                nodes[i] = FXMLLoader.load(getClass().getResource("/resources/views/Item.fxml"));
+                nodes[i] = FXMLLoader.load(getClass().getClassLoader().getResource("view/Item.fxml"));
 
                 //give the items some effect
                 nodes[i].setOnMouseEntered(event -> nodes[j].setStyle("-fx-background-color: #0A0E3F; -fx-background-radius: 1em"));
@@ -230,6 +232,7 @@ public class Controller implements Initializable {
         }
         if (actionEvent.getSource() == btnAdd) {
             btnAdd.setStyle("-fx-background-color: #10165F");
+
         }
         if (actionEvent.getSource() == btnHistory) {
             btnHistory.setStyle("-fx-background-color: #10165F");
