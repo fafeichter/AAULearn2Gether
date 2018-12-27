@@ -1,6 +1,7 @@
 .button {
-    -fx-background-color: #05071F;
+    -fx-background-color: #027faf;
     -fx-text-fill: #e7e5e5;
+    -fx-background-radius: 0;
 }
 
 .button:hover {
@@ -39,4 +40,12 @@
 
 .scroll-pane > .corner {
     -fx-background-color: black;
+}
+
+.profile-picture {
+    -fx-border-radius: 10 10 10 10;
+}
+
+.close:hover {
+    -fx-text-fill: gray;
 }

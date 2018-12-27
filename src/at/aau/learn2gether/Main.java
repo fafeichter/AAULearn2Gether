@@ -1,9 +1,10 @@
-package home;
+package at.aau.learn2gether;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
@@ -15,11 +16,12 @@ public class Main extends Application {
     }
 
     @Override
-    public void start(Stage primaryStage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("Home.fxml"));
-        primaryStage.setScene(new Scene(root));
+    public void start(Stage stage) throws Exception {
+        Parent root = FXMLLoader.load(getClass().getResource("/resources/views/Home.fxml"));
+        stage.setScene(new Scene(root));
         //set stage borderless
-        primaryStage.initStyle(StageStyle.UNDECORATED);
+        stage.initStyle(StageStyle.UNDECORATED);
+        stage.getIcons().add(new Image(String.valueOf(getClass().getResource("/resources/images/aau_logo.png"))));
 
         //drag it here
         root.setOnMousePressed(event -> {
@@ -27,11 +29,10 @@ public class Main extends Application {
             y = event.getSceneY();
         });
         root.setOnMouseDragged(event -> {
-
-            primaryStage.setX(event.getScreenX() - x);
-            primaryStage.setY(event.getScreenY() - y);
+            stage.setX(event.getScreenX() - x);
+            stage.setY(event.getScreenY() - y);
 
         });
-        primaryStage.show();
+        stage.show();
     }
 }

@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="747.0" prefWidth="1213.0" style="-fx-background-color: #02030A;" xmlns="http://javafx.com/javafx/8" fx:controller="at.aau.learn2gether.controller.Controller">
+    <effect>
+        <DropShadow color="#1b1eeb" />
+    </effect>
+    <children>
+        <VBox alignment="TOP_CENTER" prefHeight="576.0" prefWidth="256.0" style="-fx-background-color: #027faf;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <ImageView fx:id="profilePicture" fitHeight="70.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true" styleClass="profile-picture">
+                    <VBox.margin>
+                        <Insets bottom="10.0" top="50.0" />
+                    </VBox.margin>
+                    <image>
+                        <Image url="@/resources/images/profile_picture_example.jpg" />
+                    </image>
+                </ImageView>
+                <Label text="Fabian Feichter" textFill="#e7e5e5">
+                    <VBox.margin>
+                        <Insets bottom="20.0" />
+                    </VBox.margin>
+                </Label>
+                <Button fx:id="btnOverview" alignment="BASELINE_LEFT" defaultButton="true" graphicTextGap="15.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="259.0" stylesheets="@../style/style.css" text="Overview" textFill="WHITE">
+                    <graphic>
+                        <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@/resources/images/home.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                    <VBox.margin>
+                        <Insets />
+                    </VBox.margin>
+                    <padding>
+                        <Insets left="50.0" />
+                    </padding>
+                </Button>
+                <Button fx:id="btnAdd" alignment="BASELINE_LEFT" graphicTextGap="15.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="259.0" stylesheets="@../style/style.css" text="New Learning Group" textFill="WHITE">
+                    <graphic>
+                        <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@/resources/images/add.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <padding>
+                        <Insets left="50.0" />
+                    </padding>
+                </Button>
+                <Button fx:id="btnHistory" alignment="BASELINE_LEFT" graphicTextGap="15.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="259.0" stylesheets="@../style/style.css" text="History">
+                    <graphic>
+                        <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@/resources/images/history.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <padding>
+                        <Insets left="50.0" />
+                    </padding>
+                </Button>
+                <Button fx:id="btnSettings" alignment="BASELINE_LEFT" graphicTextGap="15.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="259.0" stylesheets="@../style/style.css" text="Settings" textFill="WHITE">
+                    <graphic>
+                        <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@/resources/images/settings.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <padding>
+                        <Insets left="50.0" />
+                    </padding>
+                </Button>
+                <Button fx:id="btnSignOut" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="259.0" stylesheets="@../style/style.css" text="Sign Out" textFill="WHITE">
+                    <graphic>
+                        <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@/resources/images/logout.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <padding>
+                        <Insets left="50.0" />
+                    </padding>
+                    <VBox.margin>
+                        <Insets top="370.0" />
+                    </VBox.margin>
+                </Button>
+            </children>
+        </VBox>
+        <StackPane layoutX="258.0" prefHeight="747.0" prefWidth="956.0" style="-fx-background-color: #02030A;">
+            <children>
+                <Pane fx:id="pnlOverview" prefHeight="326.0" prefWidth="956.0">
+                    <children>
+                        <TextField layoutX="748.0" layoutY="47.0" prefHeight="27.0" prefWidth="183.0" promptText="Search" style="-fx-background-color: #FFFFFF; -fx-border-color: #000000; -fx-border-radius: 1em; -fx-color-label-visible: #000000; -fx-background-radius: 3em;" />
+                        <Label layoutX="53.0" layoutY="30.0" text="AAU-Learn2Gether" textFill="#e7e5e5">
+                            <font>
+                                <Font size="24.0" />
+                            </font>
+                        </Label>
+                        <HBox alignment="CENTER_LEFT" layoutX="53.0" layoutY="72.0" prefHeight="92.0" prefWidth="653.0" spacing="50.0">
+                            <children>
+                                <VBox alignment="CENTER_LEFT" prefHeight="10.0" prefWidth="653.0">
+                                    <children>
+                                        <Label text="Next Learning Groups" textFill="#fa5f7e">
+                                            <font>
+                                                <Font name="System Bold" size="26.0" />
+                                            </font>
+                                        </Label>
+                                        <Label text="Today, 17:00 in HSA" textFill="#e7e5e5">
+                                            <graphic>
+                                                <ImageView fitHeight="10.0" fitWidth="10.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@/resources/images/calendar.png" />
+                                                    </image>
+                                                </ImageView>
+                                            </graphic>
+                                        </Label>
+                                        <Label text="Monday, 12. January 15:30 in HSA" textFill="#e7e5e5">
+                                            <graphic>
+                                                <ImageView fitHeight="10.0" fitWidth="10.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@/resources/images/calendar.png" />
+                                                    </image>
+                                                </ImageView>
+                                            </graphic>
+                                        </Label>
+                                    </children>
+                                </VBox>
+                            </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" layoutX="29.0" layoutY="178.0" prefHeight="42.0" prefWidth="899.0" spacing="10.0" style="-fx-background-color: #02030A;">
+                            <children>
+                                <Label id="lv" maxWidth="340.0" minWidth="340.0" text="Course" textFill="#e7e5e5">
+                                    <HBox.margin>
+                                        <Insets />
+                                    </HBox.margin>
+                                </Label>
+                                <Label id="description" maxWidth="160.0" minWidth="160.0" text="Description" textFill="#e7e5e5">
+                                    <HBox.margin>
+                                        <Insets />
+                                    </HBox.margin>
+                                </Label>
+                                <Label id="date" maxWidth="135.0" minWidth="135.0" text="Date" textFill="#e7e5e5">
+                                    <HBox.margin>
+                                        <Insets />
+                                    </HBox.margin>
+                                </Label>
+                                <Label id="room" maxWidth="125.0" minWidth="125.0" text="Room" textFill="#e7e5e5">
+                                    <HBox.margin>
+                                        <Insets />
+                                    </HBox.margin>
+                                </Label>
+                                <Label id="action" maxHeight="100.0" minWidth="100.0" text="Action" textFill="#e7e5e5">
+                                    <HBox.margin>
+                                        <Insets />
+                                    </HBox.margin>
+                                </Label>
+                            </children>
+                        </HBox>
+                        <ScrollPane hbarPolicy="NEVER" layoutX="15.0" layoutY="221.0" pannable="true" prefHeight="511.0" prefWidth="922.0" style="-fx-background-color: #000000;" stylesheets="@../style/style.css">
+                            <content>
+                                <VBox fx:id="pnItems" prefHeight="508.0" prefWidth="880.0" spacing="5.0" style="-fx-background-color: #02030A;">
+                                    <padding>
+                                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                    </padding>
+                                </VBox>
+                            </content>
+                        </ScrollPane>
+                        <ImageView fitHeight="17.0" fitWidth="16.0" layoutX="905.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@/resources/images/search.png" />
+                            </image>
+                        </ImageView>
+                        <Button id="close" cancelButton="true" contentDisplay="CENTER" layoutX="928.0" mnemonicParsing="false" onAction="#exit" style="-fx-background-color: #000000;" styleClass="close" stylesheets="@../style/style.css" text="x" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="15.0" />
+                            </font>
+                        </Button>
+                    </children>
+                </Pane>
+            </children>
+        </StackPane>
+    </children>
+</AnchorPane>
