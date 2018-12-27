@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="jar" name="AAULearn2Gether:jar">
-    <output-path>$PROJECT_DIR$/out/artifacts/AAULearn2Gether_jar</output-path>
-    <root id="archive" name="AAULearn2Gether_jar.jar">
-      <element id="module-output" name="AAULearn2Gether" />
-    </root>
-  </artifact>
-</component>
