@@ -84,6 +84,26 @@ public class Controller implements Initializable {
                 ((Label) nodes[i].lookup("#date")).setText(learningGroup.getDateFormatted());
                 ((Label) nodes[i].lookup("#room")).setText(learningGroup.getRoom().getNumber());
 
+                Button action = (Button) nodes[i].lookup("#action");
+
+                action.setOnMouseEntered(event -> action.setStyle("-fx-border-color: #2A73FF; -fx-border-radius: 20; -fx-background-color: #2A73FF; -fx-background-radius: 20"));
+                action.setOnMouseExited(event -> action.setStyle("-fx-border-color:  #2A73FF; -fx-border-radius: 20; -fx-background-color: transparent;"));
+                action.setOnAction(event -> {
+                    if (learningGroup.isSelected() != null && learningGroup.isSelected()) {
+                        learningGroup.setSelected(false);
+                        action.setText("join");
+                        action.setStyle("-fx-border-color:  #2A73FF; -fx-border-radius: 20; -fx-background-color: #2A73FF; -fx-background-radius: 20");
+                        action.setOnMouseEntered(eventi -> action.setStyle("-fx-border-color: #2A73FF; -fx-border-radius: 20; -fx-background-color: #2A73FF; -fx-background-radius: 20"));
+                        action.setOnMouseExited(eventii -> action.setStyle("-fx-border-color:  #2A73FF; -fx-border-radius: 20; -fx-background-color: transparent;"));
+                    } else {
+                        learningGroup.setSelected(true);
+                        action.setText("leave");
+                        action.setStyle("-fx-border-color: #F64747; -fx-border-radius: 20; -fx-background-color: #F64747; -fx-background-radius: 20");
+                        action.setOnMouseEntered(eventu -> action.setStyle("-fx-border-color: #F64747; -fx-border-radius: 20; -fx-background-color: #F64747; -fx-background-radius: 20"));
+                        action.setOnMouseExited(eventuu -> action.setStyle("-fx-border-color:  #F64747; -fx-border-radius: 20; -fx-background-color: transparent;"));
+                    }
+                });
+
                 pnItems.getChildren().add(nodes[i]);
             } catch (IOException e) {
                 e.printStackTrace();

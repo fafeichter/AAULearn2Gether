@@ -27,7 +27,7 @@
               <Label id="room" layoutY="4.0" maxWidth="100.0" minWidth="100.0" text="HSA" textFill="#d6b8b8" />
           </children>
        </Group>
-       <Button mnemonicParsing="false" prefHeight="10.0" prefWidth="60.0" style="-fx-border-color: #2A73FF; -fx-border-radius: 20; -fx-background-color: transparent;" stylesheets="@/resources/style/style.css" text="join">
+       <Button id="action" mnemonicParsing="false" prefHeight="10.0" prefWidth="60.0" style="-fx-border-color: #2A73FF; -fx-border-radius: 20; -fx-background-color: transparent;" styleClass="join" stylesheets="@/resources/style/style.css" text="join">
            <HBox.margin>
                <Insets />
            </HBox.margin>

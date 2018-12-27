@@ -9,6 +9,7 @@ public class LearningGroup implements Comparable<LearningGroup> {
     private String description;
     private Date date;
     private Room room;
+    private Boolean isSelected;
 
     public Course getLv() {
         return lv;
@@ -43,6 +44,15 @@ public class LearningGroup implements Comparable<LearningGroup> {
 
     public LearningGroup setRoom(Room room) {
         this.room = room;
+        return this;
+    }
+
+    public Boolean isSelected() {
+        return isSelected;
+    }
+
+    public LearningGroup setSelected(Boolean selected) {
+        isSelected = selected;
         return this;
     }
 
