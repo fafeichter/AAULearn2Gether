@@ -12,6 +12,8 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Tooltip;
 import javafx.scene.layout.VBox;
+import org.apache.commons.lang3.StringUtils;
+import org.controlsfx.control.textfield.TextFields;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -20,13 +22,13 @@ import java.util.Date;
 
 public class ListView {
 
+    private static java.util.List<LearningGroup> exampleData = new ArrayList<>();
     @FXML
     private VBox pnItems;
-
     @FXML
     private TextField search;
-
-    private static java.util.List<LearningGroup> exampleData = new ArrayList<>();
+    private String prevSearch;
+    private Node[] nodes;
 
     public VBox getPnItems() {
         return pnItems;
@@ -40,12 +42,19 @@ public class ListView {
     public void initialize() {
         // initialize controls with data currently in properties,
         // and ensure changes to controls are written back to properties:
-        System.out.println("hallo");
-if(exampleData.isEmpty()) {
-    generateTestData();
-}
 
-        Node[] nodes = new Node[10];
+        TextFields.bindAutoCompletion(search,
+                "Einführung in das wissenschaftliche Arbeiten [VC]",
+                "Algorithmen und Datenstrukturen [VO]",
+                "Einführung in die Informatik [UE]",
+                "Wissenschaftliche Texte mit LaTeX und Versionskontrolle mit Git für TechnikerInnen [PR]");
+
+        System.out.println("hallo");
+        if (exampleData.isEmpty()) {
+            generateTestData();
+        }
+
+        nodes = new Node[10];
         for (int i = 0; i < nodes.length; i++) {
             try {
 
@@ -205,8 +214,19 @@ if(exampleData.isEmpty()) {
     public void handleSearch(ActionEvent event) {
         System.out.println("aa");
 
+        if (event.getSource().equals(search)) {
 
-        pnItems.getChildren().setAll(pnItems.getChildren().get(0));
+
+            String searchText = ((TextField) event.getSource()).getText();
+            if (StringUtils.isBlank(searchText)) {
+                pnItems.getChildren().setAll(nodes);
+            } else {
+                if (prevSearch == null || !prevSearch.equals(searchText)) {
+                    prevSearch = searchText;
+                    pnItems.getChildren().setAll(nodes[(int) (Math.random() * 10)]);
+                }
+            }
+        }
 
     }
 }
