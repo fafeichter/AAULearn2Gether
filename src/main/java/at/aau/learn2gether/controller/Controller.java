@@ -38,8 +38,7 @@ public class Controller implements Initializable {
     @FXML
     private Button btnAdd;
 
-    @FXML
-    private Button btnHistory;
+
 
     @FXML
     private Button btnSettings;
@@ -73,7 +72,6 @@ public class Controller implements Initializable {
     public void handleClicks(ActionEvent actionEvent) {
         btnOverview.setStyle("-fx-background-color: #027faf");
         btnAdd.setStyle("-fx-background-color: #027faf");
-        btnHistory.setStyle("-fx-background-color: #027faf");
         btnSettings.setStyle("-fx-background-color: #027faf");
         btnSignOut.setStyle("-fx-background-color: #027faf");
 
@@ -94,12 +92,15 @@ public class Controller implements Initializable {
                 e.printStackTrace();
             }
             btnAdd.setStyle("-fx-background-color: #10165F");
+        }
 
-        }
-        if (actionEvent.getSource() == btnHistory) {
-            btnHistory.setStyle("-fx-background-color: #10165F");
-        }
         if (actionEvent.getSource() == btnSettings) {
+            try {
+                ((StackPane) embeddedListView).getChildren().clear();
+                ((StackPane) embeddedListView).getChildren().add(FXMLLoader.load(getClass().getClassLoader().getResource("view/Settings.fxml")));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
             btnSettings.setStyle("-fx-background-color: #10165F");
         }
         if (actionEvent.getSource() == btnSignOut) {
