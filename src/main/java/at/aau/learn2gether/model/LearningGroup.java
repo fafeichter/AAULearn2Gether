@@ -6,7 +6,7 @@ import java.util.Date;
 public class LearningGroup implements Comparable<LearningGroup> {
 
     private Course lv;
-    private String description;
+    private String content;
     private Date date;
     private Room room;
     private Boolean isSelected;
@@ -20,12 +20,12 @@ public class LearningGroup implements Comparable<LearningGroup> {
         return this;
     }
 
-    public String getDescription() {
-        return description;
+    public String getContent() {
+        return content;
     }
 
-    public LearningGroup setDescription(String description) {
-        this.description = description;
+    public LearningGroup setContent(String content) {
+        this.content = content;
         return this;
     }
 

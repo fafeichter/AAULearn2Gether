@@ -21,7 +21,7 @@
                              <Insets left="10.0" />
                          </HBox.margin>
                      </Label>
-                     <Label id="description" maxWidth="160.0" minWidth="160.0" text="Description" textFill="#e7e5e5">
+                     <Label id="content" maxWidth="160.0" minWidth="160.0" text="Content" textFill="#e7e5e5">
                          <HBox.margin>
                              <Insets />
                          </HBox.margin>
@@ -52,7 +52,7 @@
                      </VBox>
                  </content>
               </ScrollPane>
-              <TextField fx:id="searchTxtFld" layoutX="659.0" layoutY="30.0" onAction="#handleSearch" prefHeight="27.0" prefWidth="272.0" promptText="Search Learning Group by Course" style="-fx-background-color: #FFFFFF; -fx-border-radius: 2em; -fx-color-label-visible: #000000; -fx-background-radius: 2em; -fx-border-color: #02030a;" styleClass="search-box" stylesheets="@../css/style.css" />
+              <TextField fx:id="searchTxtFld" layoutX="697.0" layoutY="30.0" onAction="#handleSearch" prefHeight="27.0" prefWidth="234.0" promptText="Search" style="-fx-background-color: #FFFFFF; -fx-border-radius: 2em; -fx-color-label-visible: #000000; -fx-background-radius: 2em; -fx-border-color: #02030a;" styleClass="search-box" stylesheets="@../css/style.css" />
               <ImageView fitHeight="17.0" fitWidth="16.0" layoutX="905.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
                  <image>
                      <Image url="@../images/search.png" />

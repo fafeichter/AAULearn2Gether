@@ -16,13 +16,16 @@ import java.util.ResourceBundle;
 public class AppController implements Initializable {
 
     @FXML
+    private ImageView profilePicImgView;
+
+    @FXML
     private Button btnDashboard;
 
     @FXML
     private Button btnCreate;
 
     @FXML
-    public Button btnMyGroups;
+    private Button btnMyGroups;
 
     @FXML
     private Button btnSettings;
@@ -32,9 +35,6 @@ public class AppController implements Initializable {
 
     @FXML
     private StackPane content;
-
-    @FXML
-    private ImageView profilePicImgView;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {

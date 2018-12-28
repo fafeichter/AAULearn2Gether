@@ -20,7 +20,7 @@
     </padding>
    <children>
        <Label id="lv" maxWidth="320.0" minWidth="340.0" text="621.352 Interaktive Systeme I" textFill="#b7c3d7" />
-       <Label id="description" maxWidth="140.0" minWidth="140.0" text="Blatt 3" textFill="#b7c3d7">
+       <Label id="content" maxWidth="140.0" minWidth="140.0" text="Blatt 3" textFill="#b7c3d7">
            <HBox.margin>
                <Insets />
            </HBox.margin>

@@ -70,9 +70,9 @@ public class DashboardController {
                 lv.setText(learningGroup.getLv().toString());
                 lv.setTooltip(new Tooltip(learningGroup.getLv().toString()));
 
-                Label description = (Label) nodes[i].lookup("#description");
-                description.setText(learningGroup.getDescription());
-                description.setTooltip(new Tooltip(learningGroup.getDescription()));
+                Label content = (Label) nodes[i].lookup("#content");
+                content.setText(learningGroup.getContent());
+                content.setTooltip(new Tooltip(learningGroup.getContent()));
 
                 Label date = (Label) nodes[i].lookup("#date");
                 date.setText(learningGroup.getDateFormatted());
@@ -133,13 +133,13 @@ public class DashboardController {
         Collections.sort(dummyLearningGroups);
     }
 
-    private LearningGroup getLearningGroup(String lvNr, String lvTitle, String lvType, String description, String roomNr) {
+    private LearningGroup getLearningGroup(String lvNr, String lvTitle, String lvType, String content, String roomNr) {
         return new LearningGroup()
                 .setLv(new Course()
                         .setNumber(lvNr)
                         .setTitle(lvTitle)
                         .setType(lvType))
-                .setDescription(description)
+                .setContent(content)
                 .setDate(new Date((long) (new Date().getTime() - Math.random() * (0 - 60) * 60 * 60 * 24 * 1000)))
                 .setRoom(new Room().setNumber(roomNr));
 

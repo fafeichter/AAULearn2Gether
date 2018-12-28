@@ -24,9 +24,9 @@
             <Label text="Course: " textFill="#e7e5e5" GridPane.columnIndex="0" GridPane.rowIndex="1">
             </Label>
             <TextField fx:id="courseTxtFld" prefHeight="30.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <Label text="Description: " textFill="#e7e5e5" GridPane.columnIndex="0" GridPane.rowIndex="2">
+            <Label text="Content: " textFill="#e7e5e5" GridPane.columnIndex="0" GridPane.rowIndex="2">
             </Label>
-            <TextArea fx:id="descriptionTxtArea" prefHeight="60.0" prefWidth="580.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextArea fx:id="contentTxtArea" prefHeight="60.0" prefWidth="580.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
             <Label text="Date: " textFill="#e7e5e5" GridPane.columnIndex="0" GridPane.rowIndex="3">
             </Label>
             <DateTimePicker fx:id="dateTimePicker" format="dd.MM.yyyy HH:mm" prefHeight="30.0" prefWidth="833.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />

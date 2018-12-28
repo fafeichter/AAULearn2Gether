@@ -10,7 +10,7 @@ import tornadofx.control.DateTimePicker;
 public class FormController {
 
     @FXML
-    public TextArea descriptionTxtArea;
+    public TextArea contentTxtArea;
 
     @FXML
     public DateTimePicker dateTimePicker;
