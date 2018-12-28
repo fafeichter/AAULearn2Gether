@@ -57,3 +57,7 @@
 .search-box:hover {
     -fx-border-color: #6C6A6A !important;
 }
+
+.nav-button:hover {
+    -fx-background-color: #003E55 !important;
+}

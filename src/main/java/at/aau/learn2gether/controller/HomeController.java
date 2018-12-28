@@ -17,10 +17,13 @@ import java.util.ResourceBundle;
 public class HomeController implements Initializable {
 
     @FXML
-    private Button btnOverview;
+    private Button btnDashboard;
 
     @FXML
-    private Button btnNewLearningGroup;
+    private Button btnCreate;
+
+    @FXML
+    public Button btnMyGroups;
 
     @FXML
     private Button btnSettings;
@@ -36,25 +39,29 @@ public class HomeController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        btnOverview.setStyle("-fx-background-color: #003E55");
+        btnDashboard.setStyle("-fx-background-color: #003E55");
         profilePicImgView.setClip(new Circle(35, 35, 35));
     }
 
     public void handleClicks(ActionEvent actionEvent) {
-        btnOverview.setStyle("-fx-background-color: #027faf");
-        btnNewLearningGroup.setStyle("-fx-background-color: #027faf");
+        btnDashboard.setStyle("-fx-background-color: #027faf");
+        btnCreate.setStyle("-fx-background-color: #027faf");
+        btnMyGroups.setStyle("-fx-background-color: #027faf");
         btnSettings.setStyle("-fx-background-color: #027faf");
         btnSignOut.setStyle("-fx-background-color: #027faf");
 
-        if (actionEvent.getSource() == btnOverview) {
-            btnOverview.setStyle("-fx-background-color: #003E55");
+        if (actionEvent.getSource() == btnDashboard) {
+            btnDashboard.setStyle("-fx-background-color: #003E55");
             loadView("view/overview.fxml");
         }
-        if (actionEvent.getSource() == btnNewLearningGroup) {
-            btnNewLearningGroup.setStyle("-fx-background-color: #003E55");
+        if (actionEvent.getSource() == btnCreate) {
+            btnCreate.setStyle("-fx-background-color: #003E55");
             loadView("view/form.fxml");
         }
-
+        if (actionEvent.getSource() == btnMyGroups) {
+            btnMyGroups.setStyle("-fx-background-color: #003E55");
+            loadView("view/list.fxml");
+        }
         if (actionEvent.getSource() == btnSettings) {
             btnSettings.setStyle("-fx-background-color: #003E55");
             loadView("view/settings.fxml");
