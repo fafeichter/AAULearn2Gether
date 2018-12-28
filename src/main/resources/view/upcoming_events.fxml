@@ -18,7 +18,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<HBox alignment="CENTER_LEFT" layoutX="20.0" layoutY="65.0" prefHeight="92.0" prefWidth="479.0">
+<HBox alignment="CENTER_LEFT" layoutX="20.0" layoutY="65.0" prefHeight="92.0" prefWidth="479.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="at.aau.learn2gether.controller.UpcomingEventsController">
     <children>
         <VBox alignment="CENTER_LEFT" prefHeight="92.0" prefWidth="659.0">
             <children>
@@ -52,10 +52,10 @@
                                 <Insets left="10.0" />
                             </padding>
                             <font>
-                                <Font size="10.0" />
+                                <Font size="10.5" />
                             </font>
                             <HBox.margin>
-                                <Insets top="2.3" />
+                                <Insets top="1.0" />
                             </HBox.margin>
                         </Label>
                     </children>
@@ -73,7 +73,7 @@
                         <Label text="Monday, 12. January 15:30 in HSA" textFill="#e7e5e5" />
                         <Label prefHeight="17.0" prefWidth="281.0" text="Stochastik 1 [VU]" textFill="#f8f7f7">
                             <font>
-                                <Font size="10.0" />
+                                <Font size="10.5" />
                             </font>
                             <opaqueInsets>
                                 <Insets />
@@ -82,12 +82,12 @@
                                 <Insets left="10.0" />
                             </padding>
                             <HBox.margin>
-                                <Insets top="2.3" />
+                                <Insets top="1.0" />
                             </HBox.margin>
                         </Label>
                     </children>
                 </HBox>
-                <Label styleClass="show-more" stylesheets="@../css/style.css" text="show all" textFill="#027faf">
+                <Label fx:id="showMoreLbl" onMouseClicked="#handleShowAll" styleClass="show-more" stylesheets="@../css/style.css" text="show all" textFill="#027faf">
                     <VBox.margin>
                         <Insets top="2.0" />
                     </VBox.margin>

@@ -1,17 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 
-<StackPane xmlns:fx="http://javafx.com/fxml/1" layoutX="258.0" prefHeight="747.0" prefWidth="956.0" style="-fx-background-color: #02030A;" xmlns="http://javafx.com/javafx/8" fx:controller="at.aau.learn2gether.controller.SettingsController">
-    <Pane prefHeight="326.0" prefWidth="956.0">
-        <fx:include source="header.fxml" />
-        <Label layoutX="20.0" layoutY="65.0" prefHeight="30.0" text="Not Implemented" textFill="#e7e5e5">
-            <font>
-                <Font size="20.0"/>
-            </font>
-        </Label>
-    </Pane>
+<StackPane layoutX="258.0" prefHeight="747.0" prefWidth="956.0" style="-fx-background-color: #02030A;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+       <Pane prefHeight="326.0" prefWidth="956.0">
+          <children>
+              <fx:include source="header.fxml" />
+              <Label layoutX="20.0" layoutY="65.0" prefHeight="30.0" text="Not Implemented" textFill="#e7e5e5">
+                  <font>
+                      <Font size="20.0" />
+                  </font>
+              </Label>
+            <Label layoutX="20.0" layoutY="95.0" prefHeight="30.0" text="(would show the learning groups of the user in a data table like on dashboard)" textFill="#e7e5e5">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+          </children>
+       </Pane>
+   </children>
 </StackPane>

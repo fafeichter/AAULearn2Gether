@@ -4,7 +4,6 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.StackPane;
@@ -14,7 +13,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class HomeController implements Initializable {
+public class AppController implements Initializable {
 
     @FXML
     private Button btnDashboard;
@@ -32,7 +31,7 @@ public class HomeController implements Initializable {
     private Button btnSignOut;
 
     @FXML
-    private Parent overview;
+    private StackPane content;
 
     @FXML
     private ImageView profilePicImgView;
@@ -50,31 +49,36 @@ public class HomeController implements Initializable {
         btnSettings.setStyle("-fx-background-color: #027faf");
         btnSignOut.setStyle("-fx-background-color: #027faf");
 
-        if (actionEvent.getSource() == btnDashboard) {
+        if (actionEvent.getSource().equals(btnDashboard)) {
             btnDashboard.setStyle("-fx-background-color: #003E55");
             loadView("view/dashboard.fxml");
-        }
-        if (actionEvent.getSource() == btnCreate) {
-            btnCreate.setStyle("-fx-background-color: #003E55");
-            loadView("view/form.fxml");
-        }
-        if (actionEvent.getSource() == btnMyGroups) {
-            btnMyGroups.setStyle("-fx-background-color: #003E55");
-            loadView("view/my_learning_groups.fxml");
-        }
-        if (actionEvent.getSource() == btnSettings) {
-            btnSettings.setStyle("-fx-background-color: #003E55");
-            loadView("view/settings.fxml");
-        }
-        if (actionEvent.getSource() == btnSignOut) {
-            btnSignOut.setStyle("-fx-background-color: #003E55");
+        } else {
+            if (actionEvent.getSource().equals(btnCreate)) {
+                btnCreate.setStyle("-fx-background-color: #003E55");
+                loadView("view/form.fxml");
+            } else {
+                if (actionEvent.getSource().equals(btnSettings)) {
+                    btnSettings.setStyle("-fx-background-color: #003E55");
+                    loadView("view/settings.fxml");
+                } else {
+                    if (actionEvent.getSource().equals(btnSignOut)) {
+                        btnSignOut.setStyle("-fx-background-color: #003E55");
+                        loadView("view/sign_out.fxml");
+                    } else {
+                        if (actionEvent.getSource().equals(btnMyGroups) || actionEvent.getSource() instanceof Button) {
+                            btnMyGroups.setStyle("-fx-background-color: #003E55");
+                            loadView("view/my_learning_groups.fxml");
+                        }
+                    }
+                }
+            }
         }
     }
 
     private void loadView(String s) {
         try {
-            ((StackPane) overview).getChildren().clear();
-            ((StackPane) overview).getChildren().add(FXMLLoader.load(getClass().getClassLoader().getResource(s)));
+            ((StackPane) content).getChildren().clear();
+            ((StackPane) content).getChildren().add(FXMLLoader.load(getClass().getClassLoader().getResource(s)));
         } catch (IOException e) {
             e.printStackTrace();
         }

@@ -20,7 +20,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Date;
 
-public class OverviewController {
+public class DashboardController {
 
     private static java.util.List<LearningGroup> dummyLearningGroups = new ArrayList<>();
 
@@ -38,7 +38,7 @@ public class OverviewController {
         return learningGroupsVBox;
     }
 
-    public OverviewController setLearningGroupsVBox(VBox learningGroupsVBox) {
+    public DashboardController setLearningGroupsVBox(VBox learningGroupsVBox) {
         this.learningGroupsVBox = learningGroupsVBox;
         return this;
     }

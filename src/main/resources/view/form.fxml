@@ -29,7 +29,7 @@
             <TextArea fx:id="descriptionTxtArea" prefHeight="60.0" prefWidth="580.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
             <Label text="Date: " textFill="#e7e5e5" GridPane.columnIndex="0" GridPane.rowIndex="3">
             </Label>
-            <DateTimePicker fx:id="dateTimePicker" format="dd.MM.yyyy HH:mm" prefHeight="30.0" prefWidth="580.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <DateTimePicker fx:id="dateTimePicker" format="dd.MM.yyyy HH:mm" prefHeight="30.0" prefWidth="833.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
             <Label text="Room: " textFill="#e7e5e5" GridPane.columnIndex="0" GridPane.rowIndex="4">
             </Label>
             <TextField fx:id="roomTxtFld" prefHeight="30.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />

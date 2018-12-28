@@ -8,7 +8,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.*?>
 
-<StackPane layoutX="258.0" prefHeight="747.0" prefWidth="956.0" style="-fx-background-color: #02030A;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="at.aau.learn2gether.controller.OverviewController">
+<StackPane layoutX="258.0" prefHeight="747.0" prefWidth="956.0" style="-fx-background-color: #02030A;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="at.aau.learn2gether.controller.DashboardController">
    <children>
        <Pane prefHeight="326.0" prefWidth="956.0">
           <children>

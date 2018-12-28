@@ -11,7 +11,7 @@
 <?import javafx.scene.Group?>
 <?import javafx.scene.layout.HBox?>
 
-<HBox fx:id="itemC" alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="890.0" minHeight="-Infinity" minWidth="890.0" prefHeight="42.0" prefWidth="890.0" spacing="30.0" style="-fx-background-color: #02060A; -fx-background-radius: 1em;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<HBox fx:id="itemC" alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="892.0" minHeight="-Infinity" minWidth="892.0" prefHeight="42.0" prefWidth="892.0" spacing="30.0" style="-fx-background-color: #02060A; -fx-background-radius: 1em;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
     <effect>
         <DropShadow blurType="GAUSSIAN" height="5.0" radius="2.0" width="5.0" />
     </effect>
@@ -30,12 +30,8 @@
                <Insets />
            </HBox.margin>
        </Label>
-       <Group>
-          <children>
-              <Label id="room" layoutY="4.0" maxWidth="100.0" minWidth="100.0" text="HSA" textFill="#b7c3d7" />
-          </children>
-       </Group>
-       <Button id="action" mnemonicParsing="false" prefHeight="10.0" prefWidth="60.0" style="-fx-border-color: #027FAF; -fx-border-radius: 20; -fx-background-color: transparent;" stylesheets="@../css/style.css" text="join">
+        <Label id="room" maxWidth="100.0" minWidth="100.0" text="HSA" textFill="#b7c3d7" />
+       <Button id="action" mnemonicParsing="false" prefHeight="10.0" prefWidth="62.0" style="-fx-border-color: #027FAF; -fx-border-radius: 20; -fx-background-color: transparent;" stylesheets="@../css/style.css" text="join">
            <HBox.margin>
                <Insets />
            </HBox.margin>
