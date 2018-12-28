@@ -19,10 +19,11 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Date;
+import java.util.Objects;
 
 public class DashboardController {
 
-    private static java.util.List<LearningGroup> dummyLearningGroups = new ArrayList<>();
+    private static java.util.List<LearningGroup> dummyData = new ArrayList<>();
 
     @FXML
     private VBox learningGroupsVBox;
@@ -34,15 +35,6 @@ public class DashboardController {
 
     private Node[] nodes = new Node[12];
 
-    public VBox getLearningGroupsVBox() {
-        return learningGroupsVBox;
-    }
-
-    public DashboardController setLearningGroupsVBox(VBox learningGroupsVBox) {
-        this.learningGroupsVBox = learningGroupsVBox;
-        return this;
-    }
-
     public void initialize() {
         TextFields.bindAutoCompletion(searchTxtFld,
                 "Einführung in das wissenschaftliche Arbeiten [VC]",
@@ -50,7 +42,7 @@ public class DashboardController {
                 "Einführung in die Informatik [UE]",
                 "Wissenschaftliche Texte mit LaTeX und Versionskontrolle mit Git für TechnikerInnen [PR]");
 
-        if (dummyLearningGroups.isEmpty()) {
+        if (dummyData.isEmpty()) {
             generateDummyLearningGroups();
         }
 
@@ -60,11 +52,10 @@ public class DashboardController {
 
                 nodes[i] = loadView();
 
-                //give the items some effect
                 nodes[i].setOnMouseEntered(event -> nodes[j].setStyle("-fx-background-color: #2c3034; -fx-background-radius: 1em"));
                 nodes[i].setOnMouseExited(event -> nodes[j].setStyle("-fx-background-color: #02060A; -fx-background-radius: 1em"));
 
-                LearningGroup learningGroup = dummyLearningGroups.get(i);
+                LearningGroup learningGroup = dummyData.get(i);
 
                 Label lv = (Label) nodes[i].lookup("#lv");
                 lv.setText(learningGroup.getLv().toString());
@@ -113,24 +104,24 @@ public class DashboardController {
     }
 
     private Node loadView() throws IOException {
-        return FXMLLoader.load(getClass().getClassLoader().getResource("view/learning_group.fxml"));
+        return FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("view/learning_group.fxml")));
     }
 
     private void generateDummyLearningGroups() {
-        dummyLearningGroups.add(getLearningGroup("621.352", "Interaktive Systeme I", "PR", "Blatt 3", "Aula"));
-        dummyLearningGroups.add(getLearningGroup("621.352", "Interaktive Systeme I", "PR", "Blatt 3", "Aula"));
-        dummyLearningGroups.add(getLearningGroup("621.000", "Einführung in das wissenschaftliche Arbeiten", "VC", "Übung 5.2", "E.1.42"));
-        dummyLearningGroups.add(getLearningGroup("621.119", "Algorithmen und Datenstrukturen", "UE", "Übungsblatt 7", "Nautilusheim"));
-        dummyLearningGroups.add(getLearningGroup("621.119", "Algorithmen und Datenstrukturen", "VO", "Lernen für VO-Prüfung", "Nautilusheim"));
-        dummyLearningGroups.add(getLearningGroup("621.119", "Algorithmen und Datenstrukturen", "UE", "Lernen für Minitest #2", "Nautilusheim"));
-        dummyLearningGroups.add(getLearningGroup("651.001", "Einführung in die Informatik", "UE", "Lernen für Minitest #1", "Informatik-Labor"));
-        dummyLearningGroups.add(getLearningGroup("621.000", "Einführung in das wissenschaftliche Arbeiten", "VC", "Übung 5.2", "E.2.42"));
-        dummyLearningGroups.add(getLearningGroup("311.763", "Wissenschaftliche Texte mit LaTeX und Versionskontrolle mit Git für TechnikerInnen", "PR", "Besprechung der Inhalte für Klausur", "HSC"));
-        dummyLearningGroups.add(getLearningGroup("311.170", "Stochastik 1", "VU", "Blatt 9", "Aula"));
-        dummyLearningGroups.add(getLearningGroup("529.180", "Stochastik 2", "VU", "Allgemeines", "Uni"));
-        dummyLearningGroups.add(getLearningGroup("678.912", "Datenbanken", "UE", "Aufgabe 7.4", "HSB"));
+        dummyData.add(getLearningGroup("621.352", "Interaktive Systeme I", "PR", "Blatt 3", "Aula"));
+        dummyData.add(getLearningGroup("621.352", "Interaktive Systeme I", "PR", "Blatt 3", "Aula"));
+        dummyData.add(getLearningGroup("621.000", "Einführung in das wissenschaftliche Arbeiten", "VC", "Übung 5.2", "E.1.42"));
+        dummyData.add(getLearningGroup("621.119", "Algorithmen und Datenstrukturen", "UE", "Übungsblatt 7", "Nautilusheim"));
+        dummyData.add(getLearningGroup("621.119", "Algorithmen und Datenstrukturen", "VO", "Lernen für VO-Prüfung", "Nautilusheim"));
+        dummyData.add(getLearningGroup("621.119", "Algorithmen und Datenstrukturen", "UE", "Lernen für Minitest #2", "Nautilusheim"));
+        dummyData.add(getLearningGroup("651.001", "Einführung in die Informatik", "UE", "Lernen für Minitest #1", "Informatik-Labor"));
+        dummyData.add(getLearningGroup("621.000", "Einführung in das wissenschaftliche Arbeiten", "VC", "Übung 5.2", "E.2.42"));
+        dummyData.add(getLearningGroup("311.763", "Wissenschaftliche Texte mit LaTeX und Versionskontrolle mit Git für TechnikerInnen", "PR", "Besprechung der Inhalte für Klausur", "HSC"));
+        dummyData.add(getLearningGroup("311.170", "Stochastik 1", "VU", "Blatt 9", "Aula"));
+        dummyData.add(getLearningGroup("529.180", "Stochastik 2", "VU", "Allgemeines", "Uni"));
+        dummyData.add(getLearningGroup("678.912", "Datenbanken", "UE", "Aufgabe 7.4", "HSB"));
 
-        Collections.sort(dummyLearningGroups);
+        Collections.sort(dummyData);
     }
 
     private LearningGroup getLearningGroup(String lvNr, String lvTitle, String lvType, String content, String roomNr) {

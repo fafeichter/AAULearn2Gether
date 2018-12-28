@@ -8,6 +8,8 @@ import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
+import java.util.Objects;
+
 public class Main extends Application {
 
     private double x, y;
@@ -18,7 +20,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("view/app.fxml"));
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("view/app.fxml")));
 
         stage.setScene(new Scene(root));
         stage.initStyle(StageStyle.UNDECORATED);

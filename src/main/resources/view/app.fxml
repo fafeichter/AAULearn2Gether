@@ -24,7 +24,7 @@
                       <Insets bottom="25.0" />
                   </VBox.margin>
               </Label>
-              <Button fx:id="btnDashboard" alignment="BASELINE_LEFT" defaultButton="true" graphicTextGap="22.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="259.0" styleClass="nav-button" stylesheets="@../css/style.css" text="Dashboard" textFill="WHITE">
+              <Button fx:id="btnDashboard" alignment="BASELINE_LEFT" defaultButton="true" graphicTextGap="22.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="259.0" style="-fx-background-color: #003E55;" styleClass="nav-button" stylesheets="@../css/style.css" text="Dashboard" textFill="WHITE">
                   <graphic>
                       <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
                          <image>

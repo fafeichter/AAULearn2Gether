@@ -61,3 +61,7 @@
 .nav-button:hover {
     -fx-background-color: #003E55 !important;
 }
+
+.submit:hover {
+    -fx-background-color: #027FAF !important;
+}

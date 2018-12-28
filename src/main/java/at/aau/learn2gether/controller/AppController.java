@@ -11,6 +11,7 @@ import javafx.scene.shape.Circle;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.Objects;
 import java.util.ResourceBundle;
 
 public class AppController implements Initializable {
@@ -38,7 +39,6 @@ public class AppController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        btnDashboard.setStyle("-fx-background-color: #003E55");
         profilePicImgView.setClip(new Circle(35, 35, 35));
     }
 
@@ -77,8 +77,8 @@ public class AppController implements Initializable {
 
     private void loadView(String s) {
         try {
-            ((StackPane) content).getChildren().clear();
-            ((StackPane) content).getChildren().add(FXMLLoader.load(getClass().getClassLoader().getResource(s)));
+            content.getChildren().clear();
+            content.getChildren().add(FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource(s))));
         } catch (IOException e) {
             e.printStackTrace();
         }
