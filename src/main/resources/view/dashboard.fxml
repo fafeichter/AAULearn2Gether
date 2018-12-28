@@ -13,6 +13,7 @@
        <Pane prefHeight="326.0" prefWidth="956.0">
           <children>
               <fx:include source="header.fxml" />
+              <fx:include source="upcoming_events.fxml" />
               <HBox alignment="CENTER_LEFT" layoutX="20.0" layoutY="190.0" prefHeight="10.0" prefWidth="899.0" spacing="10.0" style="-fx-background-color: #02030A;">
                  <children>
                      <Label id="lv" maxWidth="340.0" minWidth="360.0" text="Course" textFill="#e7e5e5">
@@ -42,7 +43,7 @@
                      </Label>
                  </children>
               </HBox>
-              <ScrollPane layoutX="15.0" layoutY="221.0" pannable="true" prefHeight="511.0" prefWidth="917.0" stylesheets="@../css/style.css">
+              <ScrollPane layoutX="15.0" layoutY="215.0" pannable="true" prefHeight="511.0" prefWidth="919.0" stylesheets="@../css/style.css">
                  <content>
                      <VBox fx:id="learningGroupsVBox" prefHeight="510.0" prefWidth="880.0" spacing="5.0" style="-fx-background-color: #02030A;">
                          <padding>

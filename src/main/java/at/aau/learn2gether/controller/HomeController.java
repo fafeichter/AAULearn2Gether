@@ -52,7 +52,7 @@ public class HomeController implements Initializable {
 
         if (actionEvent.getSource() == btnDashboard) {
             btnDashboard.setStyle("-fx-background-color: #003E55");
-            loadView("view/overview.fxml");
+            loadView("view/dashboard.fxml");
         }
         if (actionEvent.getSource() == btnCreate) {
             btnCreate.setStyle("-fx-background-color: #003E55");
@@ -60,7 +60,7 @@ public class HomeController implements Initializable {
         }
         if (actionEvent.getSource() == btnMyGroups) {
             btnMyGroups.setStyle("-fx-background-color: #003E55");
-            loadView("view/list.fxml");
+            loadView("view/my_learning_groups.fxml");
         }
         if (actionEvent.getSource() == btnSettings) {
             btnSettings.setStyle("-fx-background-color: #003E55");

@@ -94,6 +94,6 @@
               </Button>
           </children>
        </VBox>
-       <fx:include fx:id="overview" source="overview.fxml" />
+       <fx:include fx:id="overview" source="dashboard.fxml" />
    </children>
 </AnchorPane>
