@@ -1,100 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.text.*?>
-<?import java.lang.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="747.0" prefWidth="1213.0" style="-fx-background-color: #02030A;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="at.aau.learn2gether.controller.AppController">
-   <children>
-       <VBox alignment="TOP_CENTER" prefHeight="576.0" prefWidth="256.0" style="-fx-background-color: #027faf;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
-          <children>
-              <ImageView fx:id="profilePicImgView" fitHeight="70.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
-                  <VBox.margin>
-                      <Insets bottom="6.0" top="50.0" />
-                  </VBox.margin>
-                 <image>
-                     <Image url="@../images/profile_picture_example.jpg" />
-                 </image>
-              </ImageView>
-              <Label text="Fabian Feichter" textFill="WHITE">
-                  <VBox.margin>
-                      <Insets bottom="25.0" />
-                  </VBox.margin>
-              </Label>
-              <Button fx:id="btnDashboard" alignment="BASELINE_LEFT" defaultButton="true" graphicTextGap="22.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="259.0" style="-fx-background-color: #003E55;" styleClass="nav-button" stylesheets="@../css/style.css" text="Dashboard" textFill="WHITE">
-                  <graphic>
-                      <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
-                         <image>
-                             <Image url="@../images/dashboard.png" />
-                         </image>
-                      </ImageView>
-                  </graphic>
-                  <opaqueInsets>
-                      <Insets />
-                  </opaqueInsets>
-                  <VBox.margin>
-                      <Insets />
-                  </VBox.margin>
-                  <padding>
-                      <Insets left="50.0" />
-                  </padding>
-              </Button>
-              <Button fx:id="btnCreate" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="259.0" styleClass="nav-button" stylesheets="@../css/style.css" text="Create Learning Group" textFill="WHITE">
-                  <graphic>
-                      <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
-                         <image>
-                             <Image url="@../images/create.png" />
-                         </image>
-                      </ImageView>
-                  </graphic>
-                  <padding>
-                      <Insets left="50.0" />
-                  </padding>
-              </Button>
-            <Button fx:id="btnMyGroups" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="259.0" styleClass="nav-button" stylesheets="@../css/style.css" text="My Learning Groups" textFill="WHITE">
-               <graphic>
-                  <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../images/my_groups.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-               <padding>
-                  <Insets left="50.0" />
-               </padding>
-            </Button>
-              <Button fx:id="btnSettings" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="259.0" styleClass="nav-button" stylesheets="@../css/style.css" text="Settings" textFill="WHITE">
-                  <graphic>
-                      <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
-                         <image>
-                             <Image url="@../images/settings.png" />
-                         </image>
-                      </ImageView>
-                  </graphic>
-                  <padding>
-                      <Insets left="50.0" />
-                  </padding>
-              </Button>
-              <Button fx:id="btnSignOut" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="259.0" styleClass="nav-button" stylesheets="@../css/style.css" text="Sign Out" textFill="WHITE">
-                  <graphic>
-                      <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
-                         <image>
-                             <Image url="@../images/log_out.png" />
-                         </image>
-                      </ImageView>
-                  </graphic>
-                  <padding>
-                      <Insets left="50.0" />
-                  </padding>
-                  <VBox.margin>
-                      <Insets top="420.0" />
-                  </VBox.margin>
-              </Button>
-          </children>
-       </VBox>
-       <fx:include fx:id="content" source="dashboard.fxml" />
-   </children>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="747.0" prefWidth="1213.0" style="-fx-background-color: #02030A;" xmlns="http://javafx.com/javafx/8" fx:controller="at.aau.learn2gether.controller.AppController">
+    <VBox alignment="TOP_CENTER" prefHeight="576.0" prefWidth="256.0" style="-fx-background-color: #027faf;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <ImageView fx:id="profilePicImgView" fitHeight="70.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+            <VBox.margin>
+                <Insets bottom="6.0" top="50.0"/>
+            </VBox.margin>
+            <Image url="@../images/profile_picture_example.jpg"/>
+        </ImageView>
+        <Label text="Fabian Feichter" textFill="WHITE">
+            <VBox.margin>
+                <Insets bottom="25.0"/>
+            </VBox.margin>
+        </Label>
+        <Button fx:id="btnDashboard" alignment="BASELINE_LEFT" defaultButton="true" graphicTextGap="22.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="259.0" style="-fx-background-color: #003E55;" styleClass="nav-button" stylesheets="@../css/style.css" text="Dashboard" textFill="WHITE">
+            <graphic>
+                <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                    <Image url="@../images/dashboard.png"/>
+                </ImageView>
+            </graphic>
+            <opaqueInsets>
+                <Insets/>
+            </opaqueInsets>
+            <VBox.margin>
+                <Insets/>
+            </VBox.margin>
+            <padding>
+                <Insets left="50.0"/>
+            </padding>
+        </Button>
+        <Button fx:id="btnCreate" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="259.0" styleClass="nav-button" stylesheets="@../css/style.css" text="Create Learning Group" textFill="WHITE">
+            <graphic>
+                <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                    <Image url="@../images/create.png"/>
+                </ImageView>
+            </graphic>
+            <padding>
+                <Insets left="50.0"/>
+            </padding>
+        </Button>
+        <Button fx:id="btnMyGroups" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="259.0" styleClass="nav-button" stylesheets="@../css/style.css" text="My Learning Groups" textFill="WHITE">
+            <graphic>
+                <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                    <Image url="@../images/my_groups.png"/>
+                </ImageView>
+            </graphic>
+            <padding>
+                <Insets left="50.0"/>
+            </padding>
+        </Button>
+        <Button fx:id="btnSettings" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="259.0" styleClass="nav-button" stylesheets="@../css/style.css" text="Settings" textFill="WHITE">
+            <graphic>
+                <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                    <Image url="@../images/settings.png"/>
+                </ImageView>
+            </graphic>
+            <padding>
+                <Insets left="50.0"/>
+            </padding>
+        </Button>
+        <Button fx:id="btnSignOut" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="259.0" styleClass="nav-button" stylesheets="@../css/style.css" text="Sign Out" textFill="WHITE">
+            <graphic>
+                <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                    <Image url="@../images/log_out.png"/>
+                </ImageView>
+            </graphic>
+            <padding>
+                <Insets left="50.0"/>
+            </padding>
+            <VBox.margin>
+                <Insets top="420.0"/>
+            </VBox.margin>
+        </Button>
+    </VBox>
+    <fx:include fx:id="content" source="dashboard.fxml"/>
 </AnchorPane>

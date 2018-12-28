@@ -1,40 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import javafx.geometry.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.effect.*?>
-<?import javafx.scene.layout.*?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.effect.DropShadow?>
-<?import javafx.scene.Group?>
 <?import javafx.scene.layout.HBox?>
 
-<HBox fx:id="itemC" alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="892.0" minHeight="-Infinity" minWidth="892.0" prefHeight="42.0" prefWidth="892.0" spacing="30.0" style="-fx-background-color: #02060A; -fx-background-radius: 1em;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<HBox xmlns:fx="http://javafx.com/fxml/1" fx:id="itemC" alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="892.0" minHeight="-Infinity" minWidth="892.0" prefHeight="42.0" prefWidth="892.0" spacing="30.0" style="-fx-background-color: #02060A; -fx-background-radius: 1em;" xmlns="http://javafx.com/javafx/8">
     <effect>
-        <DropShadow blurType="GAUSSIAN" height="5.0" radius="2.0" width="5.0" />
+        <DropShadow blurType="GAUSSIAN" height="5.0" radius="2.0" width="5.0"/>
     </effect>
     <padding>
-        <Insets left="10.0" right="10.0" />
+        <Insets left="10.0" right="10.0"/>
     </padding>
-   <children>
-       <Label id="lv" maxWidth="320.0" minWidth="340.0" text="621.352 Interaktive Systeme I" textFill="#b7c3d7" />
-       <Label id="content" maxWidth="140.0" minWidth="140.0" text="Blatt 3" textFill="#b7c3d7">
-           <HBox.margin>
-               <Insets />
-           </HBox.margin>
-       </Label>
-       <Label id="date" maxWidth="115.0" minWidth="120.0" text="Thu, 22.11.2018 17:00" textFill="#b7c3d7">
-           <HBox.margin>
-               <Insets />
-           </HBox.margin>
-       </Label>
-        <Label id="room" maxWidth="100.0" minWidth="100.0" text="HSA" textFill="#b7c3d7" />
-       <Button id="action" mnemonicParsing="false" prefHeight="10.0" prefWidth="62.0" style="-fx-border-color: #027FAF; -fx-border-radius: 20; -fx-background-color: transparent;" stylesheets="@../css/style.css" text="join">
-           <HBox.margin>
-               <Insets />
-           </HBox.margin>
-       </Button>
-   </children>
+    <Label id="lv" maxWidth="320.0" minWidth="340.0" text="621.352 Interaktive Systeme I" textFill="#b7c3d7"/>
+    <Label id="content" maxWidth="140.0" minWidth="140.0" text="Blatt 3" textFill="#b7c3d7">
+        <HBox.margin>
+            <Insets/>
+        </HBox.margin>
+    </Label>
+    <Label id="date" maxWidth="115.0" minWidth="120.0" text="Thu, 22.11.2018 17:00" textFill="#b7c3d7">
+        <HBox.margin>
+            <Insets/>
+        </HBox.margin>
+    </Label>
+    <Label id="room" maxWidth="100.0" minWidth="100.0" text="HSA" textFill="#b7c3d7"/>
+    <Button id="action" mnemonicParsing="false" prefHeight="10.0" prefWidth="62.0" style="-fx-border-color: #027FAF; -fx-border-radius: 20; -fx-background-color: transparent;" stylesheets="@../css/style.css" text="join">
+        <HBox.margin>
+            <Insets/>
+        </HBox.margin>
+    </Button>
 </HBox>
