@@ -4,7 +4,7 @@ public class Course {
 
     private String number;
     private String title;
-    private String typ;
+    private String type;
 
     public String getNumber() {
         return number;
@@ -24,17 +24,17 @@ public class Course {
         return this;
     }
 
-    public String getTyp() {
-        return typ;
+    public String getType() {
+        return type;
     }
 
-    public Course setTyp(String typ) {
-        this.typ = typ;
+    public Course setType(String type) {
+        this.type = type;
         return this;
     }
 
     @Override
     public String toString() {
-        return String.format("%s %s [%s]", this.number, this.title, this.typ);
+        return String.format("%s %s [%s]", this.number, this.title, this.type);
     }
 }

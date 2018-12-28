@@ -9,6 +9,7 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
 public class Main extends Application {
+
     private double x, y;
 
     public static void main(String[] args) {
@@ -17,22 +18,23 @@ public class Main extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("view/Home.fxml"));
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("view/home.fxml"));
+
         stage.setScene(new Scene(root));
-        //set stage borderless
         stage.initStyle(StageStyle.UNDECORATED);
         stage.getIcons().add(new Image(String.valueOf(getClass().getClassLoader().getResource("images/aau_logo.png"))));
 
-        //drag it here
         root.setOnMousePressed(event -> {
-            x = event.getSceneX();
-            y = event.getSceneY();
+            this.x = event.getSceneX();
+            this.y = event.getSceneY();
         });
+
         root.setOnMouseDragged(event -> {
             stage.setX(event.getScreenX() - x);
             stage.setY(event.getScreenY() - y);
 
         });
+
         stage.show();
     }
 }

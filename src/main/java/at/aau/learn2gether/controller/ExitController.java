@@ -11,7 +11,6 @@ public class ExitController {
     private Button closeBtn;
 
     public void initialize() {
-        System.out.println("el pene");
     }
 
     public void exit(ActionEvent actionEvent) {

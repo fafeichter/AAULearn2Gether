@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import tornadofx.control.DateTimePicker?>
+
+<StackPane xmlns:fx="http://javafx.com/fxml/1" layoutX="258.0" prefHeight="747.0" prefWidth="956.0" style="-fx-background-color: #02030A;" xmlns="http://javafx.com/javafx/8.0.172-ea" fx:controller="at.aau.learn2gether.controller.FormController">
+    <Pane prefHeight="200.0" prefWidth="200.0">
+        <fx:include source="header.fxml" />
+        <GridPane hgap="10" layoutX="51.0" layoutY="190.0" prefHeight="306.0" prefWidth="887.0" vgap="10">
+            <columnConstraints>
+                <ColumnConstraints halignment="LEFT" maxWidth="Infinity"/>
+                <ColumnConstraints hgrow="ALWAYS" maxWidth="Infinity" minWidth="200.0" prefWidth="200.0"/>
+            </columnConstraints>
+            <Label text="Course: " textFill="#e7e5e5" GridPane.columnIndex="0" GridPane.rowIndex="1">
+            </Label>
+            <TextField fx:id="courseTxtFld" prefHeight="40" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+            <Label text="Description: " textFill="#e7e5e5" GridPane.columnIndex="0" GridPane.rowIndex="2">
+            </Label>
+            <TextArea fx:id="descriptionTxtArea" prefHeight="74.0" prefWidth="580.0" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+            <Label text="Date: " textFill="#e7e5e5" GridPane.columnIndex="0" GridPane.rowIndex="3">
+            </Label>
+            <DateTimePicker fx:id="dateTimePicker" format="dd.MM.yyyy HH:mm" prefHeight="40" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+            <Label text="Room: " textFill="#e7e5e5" GridPane.columnIndex="0" GridPane.rowIndex="4">
+            </Label>
+            <TextField fx:id="roomTxtFld" prefHeight="40" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+            <Button fx:id="submitBtn" defaultButton="true" prefHeight="40" prefWidth="151.0" style="-fx-border-color: #2A73FF; -fx-border-radius: 20; -fx-background-color: transparent;" text="Submit" textFill="#e7e5e5" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.halignment="LEFT" GridPane.rowIndex="5" GridPane.rowSpan="1">
+                <GridPane.margin>
+                    <Insets top="10.0"/>
+                </GridPane.margin>
+            </Button>
+        </GridPane>
+    </Pane>
+</StackPane>

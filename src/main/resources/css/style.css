@@ -41,11 +41,3 @@
 .scroll-pane > .corner {
     -fx-background-color: black;
 }
-
-.profile-picture {
-    -fx-border-radius: 10 10 10 10;
-}
-
-.close:hover {
-    -fx-text-fill: gray;
-}

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="at.aau.learn2gether.controller.ExitController">
+    <Label layoutX="53.0" layoutY="30.0" text="AAU-Learn2Gether" textFill="#e7e5e5">
+        <font>
+            <Font size="24.0"/>
+        </font>
+    </Label>
+    <HBox alignment="CENTER_LEFT" layoutX="53.0" layoutY="72.0" prefHeight="92.0" prefWidth="653.0" spacing="50.0">
+        <VBox alignment="CENTER_LEFT" prefHeight="10.0" prefWidth="653.0">
+            <Label text="Next Learning Groups" textFill="#fa5f7e">
+                <font>
+                    <Font name="System Bold" size="26.0"/>
+                </font>
+            </Label>
+            <Label text="Today, 17:00 in HSA" textFill="#e7e5e5">
+                <graphic>
+                    <ImageView fitHeight="10.0" fitWidth="10.0" pickOnBounds="true" preserveRatio="true">
+                        <Image url="@../images/calendar.png"/>
+                    </ImageView>
+                </graphic>
+            </Label>
+            <Label text="Monday, 12. January 15:30 in HSA" textFill="#e7e5e5">
+                <graphic>
+                    <ImageView fitHeight="10.0" fitWidth="10.0" pickOnBounds="true" preserveRatio="true">
+                        <Image url="@../images/calendar.png"/>
+                    </ImageView>
+                </graphic>
+            </Label>
+        </VBox>
+    </HBox>
+    <Button id="close" fx:id="closeBtn" cancelButton="true" contentDisplay="CENTER" layoutX="928.0" mnemonicParsing="false" onAction="#exit" style="-fx-background-color: transparent;" stylesheets="@../css/style.css" text="x" textFill="WHITE">
+        <font>
+            <Font name="System Bold" size="15.0"/>
+        </font>
+        <effect>
+            <Glow/>
+        </effect>
+    </Button>
+</AnchorPane>
