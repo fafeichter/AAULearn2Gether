@@ -37,7 +37,7 @@ public class FormController {
                 "E.2.42",
                 "Informatik-Labor");
 
-        submitBtn.setOnMouseEntered(event -> submitBtn.setStyle("-fx-border-color: #2A73FF; -fx-border-radius: 20; -fx-background-color: #2A73FF; -fx-background-radius: 20"));
-        submitBtn.setOnMouseExited(event -> submitBtn.setStyle("-fx-border-color:  #2A73FF; -fx-border-radius: 20; -fx-background-color: transparent;"));
+        submitBtn.setOnMouseEntered(event -> submitBtn.setStyle("-fx-border-color: #027FAF; -fx-border-radius: 20; -fx-background-color: #027FAF; -fx-background-radius: 20"));
+        submitBtn.setOnMouseExited(event -> submitBtn.setStyle("-fx-border-color:  #027FAF; -fx-border-radius: 20; -fx-background-color: transparent;"));
     }
 }

@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.effect.Glow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -9,41 +18,101 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="at.aau.learn2gether.controller.ExitController">
-    <Label layoutX="53.0" layoutY="30.0" text="AAU-Learn2Gether" textFill="#e7e5e5">
-        <font>
-            <Font size="24.0"/>
-        </font>
-    </Label>
-    <HBox alignment="CENTER_LEFT" layoutX="53.0" layoutY="72.0" prefHeight="92.0" prefWidth="653.0" spacing="50.0">
-        <VBox alignment="CENTER_LEFT" prefHeight="10.0" prefWidth="653.0">
-            <Label text="Next Learning Groups" textFill="#fa5f7e">
-                <font>
-                    <Font name="System Bold" size="26.0"/>
-                </font>
-            </Label>
-            <Label text="Today, 17:00 in HSA" textFill="#e7e5e5">
-                <graphic>
-                    <ImageView fitHeight="10.0" fitWidth="10.0" pickOnBounds="true" preserveRatio="true">
-                        <Image url="@../images/calendar.png"/>
-                    </ImageView>
-                </graphic>
-            </Label>
-            <Label text="Monday, 12. January 15:30 in HSA" textFill="#e7e5e5">
-                <graphic>
-                    <ImageView fitHeight="10.0" fitWidth="10.0" pickOnBounds="true" preserveRatio="true">
-                        <Image url="@../images/calendar.png"/>
-                    </ImageView>
-                </graphic>
-            </Label>
-        </VBox>
-    </HBox>
-    <Button id="close" fx:id="closeBtn" cancelButton="true" contentDisplay="CENTER" layoutX="928.0" mnemonicParsing="false" onAction="#exit" style="-fx-background-color: transparent;" stylesheets="@../css/style.css" text="x" textFill="WHITE">
-        <font>
-            <Font name="System Bold" size="15.0"/>
-        </font>
-        <effect>
-            <Glow/>
-        </effect>
-    </Button>
+<AnchorPane prefHeight="183.0" prefWidth="956.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="at.aau.learn2gether.controller.ExitController">
+   <children>
+       <Label layoutX="20.0" layoutY="15.0" text="AAU-Learn2Gether" textFill="#e7e5e5">
+           <font>
+               <Font size="24.0" />
+           </font>
+       </Label>
+       <HBox alignment="CENTER_LEFT" layoutX="20.0" layoutY="65.0" prefHeight="92.0" prefWidth="479.0">
+          <children>
+              <VBox alignment="CENTER_LEFT" prefHeight="92.0" prefWidth="659.0">
+                 <children>
+                     <Label text="Upcoming Learning Groups" textFill="#fa5f7e">
+                         <font>
+                             <Font name="System Bold" size="26.0" />
+                         </font>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <VBox.margin>
+                        <Insets bottom="2.0" />
+                     </VBox.margin>
+                     </Label>
+                  <HBox>
+                     <children>
+                             <ImageView fitHeight="10.0" fitWidth="10.0" pickOnBounds="true" preserveRatio="true">
+                                <image>
+                                    <Image url="@../images/calendar.png" />
+                                </image>
+                           <HBox.margin>
+                              <Insets right="3.0" top="3.0" />
+                           </HBox.margin>
+                             </ImageView>
+                           <Label text="Today, 17:00 in Aula" textFill="#e7e5e5" />
+                        <Label prefHeight="17.0" prefWidth="281.0" text="Algorithmen und Datenstrukturen [UE]" textFill="#f8f7f7">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets top="2.3" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                             <ImageView fitHeight="10.0" fitWidth="10.0" pickOnBounds="true" preserveRatio="true">
+                                <image>
+                                    <Image url="@../images/calendar.png" />
+                                </image>
+                           <HBox.margin>
+                              <Insets right="3.0" top="3.0" />
+                           </HBox.margin>
+                             </ImageView>
+                           <Label text="Monday, 12. January 15:30 in HSA" textFill="#e7e5e5" />
+                        <Label prefHeight="17.0" prefWidth="281.0" text="Stochastik 1 [VU]" textFill="#f8f7f7">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets top="2.3" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <Label styleClass="show-more" stylesheets="@../css/style.css" text="show all" textFill="#027faf">
+                     <VBox.margin>
+                        <Insets top="2.0" />
+                     </VBox.margin>
+                  </Label>
+                 </children>
+              </VBox>
+          </children>
+       </HBox>
+       <Button fx:id="closeBtn" cancelButton="true" contentDisplay="CENTER" layoutX="925.0" mnemonicParsing="false" onAction="#exit" style="-fx-background-color: transparent;" styleClass="close" stylesheets="@../css/style.css" text="x" textFill="WHITE">
+           <font>
+               <Font name="System Bold" size="14.0" />
+           </font>
+           <effect>
+               <Glow />
+           </effect>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+       </Button>
+   </children>
 </AnchorPane>

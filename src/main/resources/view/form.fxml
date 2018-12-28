@@ -25,7 +25,7 @@
             <Label text="Room: " textFill="#e7e5e5" GridPane.columnIndex="0" GridPane.rowIndex="4">
             </Label>
             <TextField fx:id="roomTxtFld" prefHeight="40" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
-            <Button fx:id="submitBtn" defaultButton="true" prefHeight="40" prefWidth="151.0" style="-fx-border-color: #2A73FF; -fx-border-radius: 20; -fx-background-color: transparent;" text="Submit" textFill="#e7e5e5" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.halignment="LEFT" GridPane.rowIndex="5" GridPane.rowSpan="1">
+            <Button fx:id="submitBtn" defaultButton="true" prefHeight="40" prefWidth="151.0" style="-fx-border-color: #027FAF; -fx-border-radius: 20; -fx-background-color: transparent;" text="Submit" textFill="#e7e5e5" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.halignment="LEFT" GridPane.rowIndex="5" GridPane.rowSpan="1">
                 <GridPane.margin>
                     <Insets top="10.0"/>
                 </GridPane.margin>

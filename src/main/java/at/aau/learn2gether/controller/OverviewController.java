@@ -32,7 +32,7 @@ public class OverviewController {
 
     private String prevSearchTerm;
 
-    private Node[] nodes = new Node[10];
+    private Node[] nodes = new Node[12];
 
     public VBox getLearningGroupsVBox() {
         return learningGroupsVBox;
@@ -61,7 +61,7 @@ public class OverviewController {
                 nodes[i] = loadView();
 
                 //give the items some effect
-                nodes[i].setOnMouseEntered(event -> nodes[j].setStyle("-fx-background-color: #0A0E3F; -fx-background-radius: 1em"));
+                nodes[i].setOnMouseEntered(event -> nodes[j].setStyle("-fx-background-color: #2c3034; -fx-background-radius: 1em"));
                 nodes[i].setOnMouseExited(event -> nodes[j].setStyle("-fx-background-color: #02060A; -fx-background-radius: 1em"));
 
                 LearningGroup learningGroup = dummyLearningGroups.get(i);
@@ -83,25 +83,25 @@ public class OverviewController {
                 room.setTooltip(new Tooltip(learningGroup.getRoom().getNumber()));
 
                 Button action = (Button) nodes[i].lookup("#action");
-                action.setOnMouseEntered(event -> action.setStyle("-fx-border-color: #2A73FF; -fx-border-radius: 20; -fx-background-color: #2A73FF; -fx-background-radius: 20"));
-                action.setOnMouseExited(event -> action.setStyle("-fx-border-color:  #2A73FF; -fx-border-radius: 20; -fx-background-color: transparent;"));
+                action.setOnMouseEntered(event -> action.setStyle("-fx-border-color: #003E55; -fx-border-radius: 20; -fx-background-color: #027FAF; -fx-background-radius: 20"));
+                action.setOnMouseExited(event -> action.setStyle("-fx-border-color:  #027FAF; -fx-border-radius: 20; -fx-background-color: transparent;"));
                 action.setOnAction(event -> {
                     if (learningGroup.isSelected() != null && learningGroup.isSelected()) {
                         learningGroup.setSelected(false);
 
                         action.setText("join");
 
-                        action.setStyle("-fx-border-color:  #2A73FF; -fx-border-radius: 20; -fx-background-color: #2A73FF; -fx-background-radius: 20");
-                        action.setOnMouseEntered(eventi -> action.setStyle("-fx-border-color: #2A73FF; -fx-border-radius: 20; -fx-background-color: #2A73FF; -fx-background-radius: 20"));
-                        action.setOnMouseExited(eventii -> action.setStyle("-fx-border-color:  #2A73FF; -fx-border-radius: 20; -fx-background-color: transparent;"));
+                        action.setStyle("-fx-border-color:  #003e55; -fx-border-radius: 20; -fx-background-color: #027FAF; -fx-background-radius: 20");
+                        action.setOnMouseEntered(eventi -> action.setStyle("-fx-border-color: #003e55; -fx-border-radius: 20; -fx-background-color: #027FAF; -fx-background-radius: 20"));
+                        action.setOnMouseExited(eventii -> action.setStyle("-fx-border-color:  #027FAF; -fx-border-radius: 20; -fx-background-color: transparent;"));
                     } else {
                         learningGroup.setSelected(true);
 
                         action.setText("leave");
 
-                        action.setStyle("-fx-border-color: #F64747; -fx-border-radius: 20; -fx-background-color: #F64747; -fx-background-radius: 20");
-                        action.setOnMouseEntered(eventu -> action.setStyle("-fx-border-color: #F64747; -fx-border-radius: 20; -fx-background-color: #F64747; -fx-background-radius: 20"));
-                        action.setOnMouseExited(eventuu -> action.setStyle("-fx-border-color:  #F64747; -fx-border-radius: 20; -fx-background-color: transparent;"));
+                        action.setStyle("-fx-border-color:  #003e55; -fx-border-radius: 20; -fx-background-color: #F64747; -fx-background-radius: 20");
+                        action.setOnMouseEntered(eventi -> action.setStyle("-fx-border-color: #003e55; -fx-border-radius: 20; -fx-background-color: #F64747; -fx-background-radius: 20"));
+                        action.setOnMouseExited(eventii -> action.setStyle("-fx-border-color:  #F64747; -fx-border-radius: 20; -fx-background-color: transparent;"));
                     }
                 });
 
@@ -125,8 +125,10 @@ public class OverviewController {
         dummyLearningGroups.add(getLearningGroup("621.119", "Algorithmen und Datenstrukturen", "UE", "Lernen für Minitest #2", "Nautilusheim"));
         dummyLearningGroups.add(getLearningGroup("651.001", "Einführung in die Informatik", "UE", "Lernen für Minitest #1", "Informatik-Labor"));
         dummyLearningGroups.add(getLearningGroup("621.000", "Einführung in das wissenschaftliche Arbeiten", "VC", "Übung 5.2", "E.2.42"));
-        dummyLearningGroups.add(getLearningGroup("311.763", "Wissenschaftliche Texte mit LaTeX und Versionskontrolle mit Git für TechnikerInnen", "PR", "Besprechung der Inhalte", "HSC"));
+        dummyLearningGroups.add(getLearningGroup("311.763", "Wissenschaftliche Texte mit LaTeX und Versionskontrolle mit Git für TechnikerInnen", "PR", "Besprechung der Inhalte für Klausur", "HSC"));
         dummyLearningGroups.add(getLearningGroup("311.170", "Stochastik 1", "VU", "Blatt 9", "Aula"));
+        dummyLearningGroups.add(getLearningGroup("529.180", "Stochastik 2", "VU", "Allgemeines", "Uni"));
+        dummyLearningGroups.add(getLearningGroup("678.912", "Datenbanken", "UE", "Aufgabe 7.4", "HSB"));
 
         Collections.sort(dummyLearningGroups);
     }

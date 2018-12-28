@@ -36,7 +36,7 @@ public class HomeController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        btnOverview.setStyle("-fx-background-color: #10165F");
+        btnOverview.setStyle("-fx-background-color: #003E55");
         profilePicImgView.setClip(new Circle(35, 35, 35));
     }
 
@@ -47,20 +47,20 @@ public class HomeController implements Initializable {
         btnSignOut.setStyle("-fx-background-color: #027faf");
 
         if (actionEvent.getSource() == btnOverview) {
-            btnOverview.setStyle("-fx-background-color: #10165F");
+            btnOverview.setStyle("-fx-background-color: #003E55");
             loadView("view/overview.fxml");
         }
         if (actionEvent.getSource() == btnNewLearningGroup) {
-            btnNewLearningGroup.setStyle("-fx-background-color: #10165F");
+            btnNewLearningGroup.setStyle("-fx-background-color: #003E55");
             loadView("view/form.fxml");
         }
 
         if (actionEvent.getSource() == btnSettings) {
-            btnSettings.setStyle("-fx-background-color: #10165F");
+            btnSettings.setStyle("-fx-background-color: #003E55");
             loadView("view/settings.fxml");
         }
         if (actionEvent.getSource() == btnSignOut) {
-            btnSignOut.setStyle("-fx-background-color: #10165F");
+            btnSignOut.setStyle("-fx-background-color: #003E55");
         }
     }
 
