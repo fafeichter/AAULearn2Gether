@@ -67,7 +67,7 @@ public class AppController implements Initializable {
                     } else {
                         if (actionEvent.getSource().equals(btnMyGroups) || actionEvent.getSource() instanceof Button) {
                             btnMyGroups.setStyle("-fx-background-color: #003E55");
-                            loadView("view/my_learning_groups.fxml");
+                            loadView("view/my_schedule.fxml");
                         }
                     }
                 }

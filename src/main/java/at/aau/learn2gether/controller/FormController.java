@@ -22,6 +22,7 @@ public class FormController {
         TextFields.bindAutoCompletion(roomTxtFld,
                 "HSA",
                 "Aula",
+                "E.1.42",
                 "E.2.42",
                 "Informatik-Labor");
     }

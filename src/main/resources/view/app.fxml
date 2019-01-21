@@ -44,10 +44,12 @@
                 <Insets left="50.0"/>
             </padding>
         </Button>
-        <Button fx:id="btnMyGroups" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="259.0" styleClass="nav-button" stylesheets="@../css/style.css" text="My Learning Groups" textFill="WHITE">
+        <Button fx:id="btnMyGroups" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false"
+                onAction="#handleClicks" prefHeight="42.0" prefWidth="259.0" styleClass="nav-button"
+                stylesheets="@../css/style.css" text="My Schedule" textFill="WHITE">
             <graphic>
                 <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
-                    <Image url="@../images/my_groups.png"/>
+                    <Image url="@../images/calendar.png"/>
                 </ImageView>
             </graphic>
             <padding>

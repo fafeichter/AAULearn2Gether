@@ -13,7 +13,8 @@
                 <Font size="20.0"/>
             </font>
         </Label>
-        <Label layoutX="20.0" layoutY="95.0" prefHeight="30.0" text="(would show the learning groups of the user in a data table like on dashboard)" textFill="#e7e5e5">
+        <Label layoutX="20.0" layoutY="95.0" prefHeight="30.0"
+               text="(would show a calendar with the dates for the learning groups)" textFill="#e7e5e5">
             <font>
                 <Font size="12.0"/>
             </font>

@@ -19,10 +19,6 @@ import java.util.stream.Collectors;
 
 public class DashboardController {
 
-    private static java.util.List<LearningGroup> data = new ArrayList<>();
-
-    private static Node[] nodes = new Node[12];
-
     @FXML
     public CheckBox filterChckBx;
 
@@ -34,6 +30,10 @@ public class DashboardController {
 
     @FXML
     private TextField searchTxtFld;
+
+    private java.util.List<LearningGroup> data = new ArrayList<>();
+
+    private Node[] nodes = new Node[12];
 
     private String prevSearchTerm;
 
@@ -50,7 +50,10 @@ public class DashboardController {
             generateDummyLearningGroups();
         }
         for (int i = 0; i < nodes.length; i++) {
-            learningGroupsVBox.getChildren().add(createNode(data.get(i)));
+            Node node = createNode(data.get(i));
+
+            nodes[i] = node;
+            learningGroupsVBox.getChildren().add(node);
         }
     }
 
@@ -72,7 +75,7 @@ public class DashboardController {
     public void handleFilter(ActionEvent event) {
         learningGroupsVBox.getChildren().clear();
 
-        if ((((CheckBox) event.getSource()).isSelected())) {
+        if (((CheckBox) event.getSource()).isSelected()) {
             List<LearningGroup> filteredList = data.stream()
                     .filter(learningGroup -> BooleanUtils.isTrue(learningGroup.isSelected()))
                     .collect(Collectors.toList());

@@ -13,7 +13,7 @@
                 <Font size="20.0"/>
             </font>
         </Label>
-        <Label layoutX="20.0" layoutY="95.0" prefHeight="30.0" text="(would go back to the login page)" textFill="#e7e5e5">
+        <Label layoutX="20.0" layoutY="95.0" prefHeight="30.0" text="(would go to the login page)" textFill="#e7e5e5">
             <font>
                 <Font size="12.0" />
             </font>
