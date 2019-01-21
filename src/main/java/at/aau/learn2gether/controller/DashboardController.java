@@ -39,6 +39,7 @@ public class DashboardController {
 
     public void initialize() {
         learningGroupsScllPne.setFitToWidth(true);
+        learningGroupsScllPne.setFitToHeight(true);
 
         TextFields.bindAutoCompletion(searchTxtFld,
                 "Einführung in das wissenschaftliche Arbeiten [VC]",
