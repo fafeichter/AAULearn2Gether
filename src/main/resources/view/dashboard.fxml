@@ -5,48 +5,66 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.*?>
-
 <StackPane xmlns:fx="http://javafx.com/fxml/1" layoutX="258.0" prefHeight="747.0" prefWidth="956.0" style="-fx-background-color: #02030A;" xmlns="http://javafx.com/javafx/8" fx:controller="at.aau.learn2gether.controller.DashboardController">
-    <Pane prefHeight="326.0" prefWidth="956.0">
-        <fx:include source="header.fxml"/>
-        <fx:include source="upcoming_events.fxml"/>
-        <HBox alignment="CENTER_LEFT" layoutX="20.0" layoutY="190.0" prefHeight="10.0" prefWidth="899.0" spacing="10.0" style="-fx-background-color: #02030A;">
-            <Label id="lv" maxWidth="340.0" minWidth="360.0" text="Course" textFill="#e7e5e5">
-                <HBox.margin>
-                    <Insets left="10.0"/>
-                </HBox.margin>
-            </Label>
-            <Label id="content" maxWidth="160.0" minWidth="160.0" text="Content" textFill="#e7e5e5">
-                <HBox.margin>
-                    <Insets/>
-                </HBox.margin>
-            </Label>
-            <Label id="date" maxWidth="135.0" minWidth="135.0" text="Date" textFill="#e7e5e5">
-                <HBox.margin>
-                    <Insets/>
-                </HBox.margin>
-            </Label>
-            <Label id="room" maxWidth="125.0" minWidth="125.0" text="Room" textFill="#e7e5e5">
-                <HBox.margin>
-                    <Insets/>
-                </HBox.margin>
-            </Label>
-            <Label id="action" maxHeight="100.0" minWidth="100.0" text="Action" textFill="#e7e5e5">
-                <HBox.margin>
-                    <Insets/>
-                </HBox.margin>
-            </Label>
-        </HBox>
-        <ScrollPane layoutX="15.0" layoutY="215.0" pannable="true" prefHeight="511.0" prefWidth="919.0" stylesheets="@../css/style.css">
-            <VBox fx:id="learningGroupsVBox" prefHeight="510.0" prefWidth="880.0" spacing="5.0" style="-fx-background-color: #02030A;">
-                <padding>
-                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
-                </padding>
-            </VBox>
-        </ScrollPane>
-        <TextField fx:id="searchTxtFld" layoutX="697.0" layoutY="30.0" onAction="#handleSearch" prefHeight="27.0" prefWidth="234.0" promptText="Search" style="-fx-background-color: #FFFFFF; -fx-border-radius: 2em; -fx-color-label-visible: #000000; -fx-background-radius: 2em; -fx-border-color: #02030a;" styleClass="search-box" stylesheets="@../css/style.css"/>
-        <ImageView fitHeight="17.0" fitWidth="16.0" layoutX="905.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
-            <Image url="@../images/search.png"/>
-        </ImageView>
-    </Pane>
+    <children>
+        <Pane prefHeight="326.0" prefWidth="956.0">
+            <children>
+                <fx:include source="header.fxml"/>
+                <fx:include source="upcoming_events.fxml"/>
+                <HBox alignment="CENTER_LEFT" layoutX="20.0" layoutY="190.0" prefHeight="10.0" prefWidth="899.0"
+                      spacing="10.0" style="-fx-background-color: #02030A;">
+                    <children>
+                        <Label id="lv" maxWidth="340.0" minWidth="360.0" text="Course" textFill="#e7e5e5">
+                            <HBox.margin>
+                                <Insets left="10.0"/>
+                            </HBox.margin>
+                        </Label>
+                        <Label id="content" maxWidth="160.0" minWidth="160.0" text="Content" textFill="#e7e5e5">
+                            <HBox.margin>
+                                <Insets/>
+                            </HBox.margin>
+                        </Label>
+                        <Label id="date" maxWidth="135.0" minWidth="135.0" text="Date" textFill="#e7e5e5">
+                            <HBox.margin>
+                                <Insets/>
+                            </HBox.margin>
+                        </Label>
+                        <Label id="room" maxWidth="125.0" minWidth="125.0" text="Room" textFill="#e7e5e5">
+                            <HBox.margin>
+                                <Insets/>
+                            </HBox.margin>
+                        </Label>
+                        <Label id="action" maxHeight="100.0" minWidth="100.0" text="Action" textFill="#e7e5e5">
+                            <HBox.margin>
+                                <Insets/>
+                            </HBox.margin>
+                        </Label>
+                    </children>
+                </HBox>
+                <ScrollPane layoutX="15.0" layoutY="215.0" pannable="true" prefHeight="511.0" prefWidth="919.0"
+                            stylesheets="@../css/style.css">
+                    <content>
+                        <VBox fx:id="learningGroupsVBox" prefHeight="510.0" prefWidth="880.0" spacing="5.0"
+                              style="-fx-background-color: #02030A;">
+                            <padding>
+                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+                            </padding>
+                        </VBox>
+                    </content>
+                </ScrollPane>
+                <TextField fx:id="searchTxtFld" layoutX="697.0" layoutY="30.0" onAction="#handleSearch"
+                           prefHeight="27.0" prefWidth="234.0" promptText="Search"
+                           style="-fx-background-color: #FFFFFF; -fx-border-radius: 2em; -fx-color-label-visible: #000000; -fx-background-radius: 2em; -fx-border-color: #02030a;"
+                           styleClass="search-box" stylesheets="@../css/style.css"/>
+                <ImageView fitHeight="17.0" fitWidth="16.0" layoutX="905.0" layoutY="36.0" pickOnBounds="true"
+                           preserveRatio="true">
+                    <image>
+                        <Image url="@../images/search.png"/>
+                    </image>
+                </ImageView>
+                <CheckBox fx:id="filterChckBx" layoutX="769.0" layoutY="157.0" mnemonicParsing="false"
+                          onAction="#handleFilter" text="show only joined groups"/>
+            </children>
+        </Pane>
+    </children>
 </StackPane>
