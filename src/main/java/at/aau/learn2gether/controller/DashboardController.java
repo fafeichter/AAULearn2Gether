@@ -19,33 +19,38 @@ import java.util.stream.Collectors;
 
 public class DashboardController {
 
-    private static java.util.List<LearningGroup> dummyData = new ArrayList<>();
+    private static java.util.List<LearningGroup> data = new ArrayList<>();
+
+    private static Node[] nodes = new Node[12];
+
+    @FXML
+    public CheckBox filterChckBx;
 
     @FXML
     private VBox learningGroupsVBox;
 
     @FXML
-    private TextField searchTxtFld;
+    private ScrollPane learningGroupsScllPne;
 
     @FXML
-    public CheckBox filterChckBx;
+    private TextField searchTxtFld;
 
     private String prevSearchTerm;
 
-    private Node[] nodes = new Node[12];
-
     public void initialize() {
+        learningGroupsScllPne.setFitToWidth(true);
+
         TextFields.bindAutoCompletion(searchTxtFld,
                 "Einführung in das wissenschaftliche Arbeiten [VC]",
                 "Algorithmen und Datenstrukturen [VO]",
                 "Einführung in die Informatik [UE]",
                 "Wissenschaftliche Texte mit LaTeX und Versionskontrolle mit Git für TechnikerInnen [PR]");
 
-        if (dummyData.isEmpty()) {
+        if (data.isEmpty()) {
             generateDummyLearningGroups();
         }
         for (int i = 0; i < nodes.length; i++) {
-            learningGroupsVBox.getChildren().add(createNode(dummyData.get(i)));
+            learningGroupsVBox.getChildren().add(createNode(data.get(i)));
         }
     }
 
@@ -68,22 +73,22 @@ public class DashboardController {
         learningGroupsVBox.getChildren().clear();
 
         if ((((CheckBox) event.getSource()).isSelected())) {
-            List<LearningGroup> filteredList = dummyData.stream().filter(learningGroup -> BooleanUtils.isTrue(learningGroup.isSelected())).collect(Collectors.toList());
+            List<LearningGroup> filteredList = data.stream()
+                    .filter(learningGroup -> BooleanUtils.isTrue(learningGroup.isSelected()))
+                    .collect(Collectors.toList());
 
-            System.out.println(filteredList.size());
             for (LearningGroup element : filteredList) {
                 learningGroupsVBox.getChildren().add(createNode(element));
             }
         } else {
             for (int i = 0; i < nodes.length; i++) {
-                learningGroupsVBox.getChildren().add(createNode(dummyData.get(i)));
+                learningGroupsVBox.getChildren().add(createNode(data.get(i)));
             }
         }
     }
 
     private Node createNode(LearningGroup learningGroup) {
         try {
-
             Node node = loadView();
 
             node.setOnMouseEntered(event -> node.setStyle("-fx-background-color: #2c3034; -fx-background-radius: 1em"));
@@ -119,7 +124,7 @@ public class DashboardController {
                     setButtonStyleToLeave(action);
 
                     if (filterChckBx.isSelected()) {
-                        learningGroupsVBox.getChildren().remove(null);
+                        learningGroupsVBox.getChildren().remove(((Button) event.getSource()).getParent());
                     }
                 } else {
                     learningGroup.setSelected(true);
@@ -131,24 +136,25 @@ public class DashboardController {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
         return null;
     }
 
     private void generateDummyLearningGroups() {
-        dummyData.add(getLearningGroupByData("621.352", "Interaktive Systeme I", "PR", "Blatt 3", "Aula"));
-        dummyData.add(getLearningGroupByData("621.352", "Interaktive Systeme I", "PR", "Blatt 3", "Aula"));
-        dummyData.add(getLearningGroupByData("621.000", "Einführung in das wissenschaftliche Arbeiten", "VC", "Übung 5.2", "E.1.42"));
-        dummyData.add(getLearningGroupByData("621.119", "Algorithmen und Datenstrukturen", "UE", "Übungsblatt 7", "Nautilusheim"));
-        dummyData.add(getLearningGroupByData("621.119", "Algorithmen und Datenstrukturen", "VO", "Lernen für VO-Prüfung", "Nautilusheim"));
-        dummyData.add(getLearningGroupByData("621.119", "Algorithmen und Datenstrukturen", "UE", "Lernen für Minitest #2", "Nautilusheim"));
-        dummyData.add(getLearningGroupByData("651.001", "Einführung in die Informatik", "UE", "Lernen für Minitest #1", "Informatik-Labor"));
-        dummyData.add(getLearningGroupByData("621.000", "Einführung in das wissenschaftliche Arbeiten", "VC", "Übung 5.2", "E.2.42"));
-        dummyData.add(getLearningGroupByData("311.763", "Wissenschaftliche Texte mit LaTeX und Versionskontrolle mit Git für TechnikerInnen", "PR", "Besprechung der Inhalte für Klausur", "HSC"));
-        dummyData.add(getLearningGroupByData("311.170", "Stochastik 1", "VU", "Blatt 9", "Aula"));
-        dummyData.add(getLearningGroupByData("529.180", "Stochastik 2", "VU", "Allgemeines", "Uni"));
-        dummyData.add(getLearningGroupByData("678.912", "Datenbanken", "UE", "Aufgabe 7.4", "HSB"));
+        data.add(getLearningGroupByData("621.352", "Interaktive Systeme I", "PR", "Blatt 3", "Aula"));
+        data.add(getLearningGroupByData("621.352", "Interaktive Systeme I", "PR", "Blatt 3", "Aula"));
+        data.add(getLearningGroupByData("621.000", "Einführung in das wissenschaftliche Arbeiten", "VC", "Übung 5.2", "E.1.42"));
+        data.add(getLearningGroupByData("621.119", "Algorithmen und Datenstrukturen", "UE", "Übungsblatt 7", "Nautilusheim"));
+        data.add(getLearningGroupByData("621.119", "Algorithmen und Datenstrukturen", "VO", "Lernen für VO-Prüfung", "Nautilusheim"));
+        data.add(getLearningGroupByData("621.119", "Algorithmen und Datenstrukturen", "UE", "Lernen für Minitest #2", "Nautilusheim"));
+        data.add(getLearningGroupByData("651.001", "Einführung in die Informatik", "UE", "Lernen für Minitest #1", "Informatik-Labor"));
+        data.add(getLearningGroupByData("621.000", "Einführung in das wissenschaftliche Arbeiten", "VC", "Übung 5.2", "E.2.42"));
+        data.add(getLearningGroupByData("311.763", "Wissenschaftliche Texte mit LaTeX und Versionskontrolle mit Git für TechnikerInnen", "PR", "Besprechung der Inhalte für Klausur", "HSC"));
+        data.add(getLearningGroupByData("311.170", "Stochastik 1", "VU", "Blatt 9", "Aula"));
+        data.add(getLearningGroupByData("529.180", "Stochastik 2", "VU", "Allgemeines", "Uni"));
+        data.add(getLearningGroupByData("678.912", "Datenbanken", "UE", "Aufgabe 7.4", "HSB"));
 
-        Collections.sort(dummyData);
+        Collections.sort(data);
     }
 
     private LearningGroup getLearningGroupByData(String lvNr, String lvTitle, String lvType, String content, String roomNr) {
@@ -161,7 +167,6 @@ public class DashboardController {
                 .setDate(new Date((long) (new Date().getTime() - Math.random() * (0 - 60) * 60 * 60 * 24 * 1000)))
                 .setRoom(new Room().setNumber(roomNr))
                 .setSelected(false);
-
     }
 
     private Node loadView() throws IOException {
